@@ -25,7 +25,7 @@ Change permissions and run the script:
 chmod +x autoinstall_uomi.sh
 ./autoinstall_uomi.sh
 ```
-```
+
 Enter the node name when asked:
 ```
 Enter your node name: My-Uomi-Node
