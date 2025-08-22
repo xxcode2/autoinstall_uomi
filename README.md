@@ -17,45 +17,45 @@ Saat menjalankan script, kamu akan diminta untuk **mengisi nama node**, yang lan
 
 Clone repo ini:  
 ```
-```git clone https://github.com/xxcode2/autoinstall_uomi.git```
-```cd autoinstall_uomi```
+git clone https://github.com/xxcode2/autoinstall_uomi.git
+cd autoinstall_uomi
 
 Change permissions and run the script:
-```chmod +x autoinstall_uomi.sh```
-```./autoinstall_uomi.sh```
-```
+chmod +x autoinstall_uomi.sh
+./autoinstall_uomi.sh
 ```
 Enter the node name when asked:
-```Enter your node name: My-Uomi-Node```
 ```
+Enter your node name: My-Uomi-Node
+```
+## 🔍 Important Commands
 ```
 ## 🔍 Important Commands
 🔹 Check node status
-```sudo systemctl status uomi.service --no-pager```
+sudo systemctl status uomi.service --no-pager```
 
 🔹 Check real-time logs
-```journalctl -fu uomi.service```
+journalctl -fu uomi.service
 
 🔹 Restart node
 
-```sudo systemctl restart uomi.service```
+sudo systemctl restart uomi.service
 
 
 🔹 Stop node
 
-```sudo systemctl stop uomi.service && sudo systemctl disable uomi.service```
-
+sudo systemctl stop uomi.service && sudo systemctl disable uomi.service
 
 🔹 Backup data node
 
-```sudo tar -czf uomi-backup-$(date +%Y%m%d).tar.gz /var/lib/uomi```
+sudo tar -czf uomi-backup-$(date +%Y%m%d).tar.gz /var/lib/uomi
 
 ## 🌐 Verify RPC Endpoint
 
 Check RPC with:
-``curl -H "Content-Type: application/json" \
+curl -H "Content-Type: application/json" \
   -d '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' \
-  http://localhost:9944``
+  http://localhost:9944
 ```
 ## 📖 Official Documentation
 https://docs.uomi.ai/build/run-a-node/run-an-archive-node/binary
