@@ -32,11 +32,10 @@ Enter your node name: My-Uomi-Node
 ```
 ## 🔍 Important Commands
 ```
-## 🔍 Important Commands
 🔹 Check node status
-``
+
 sudo systemctl status uomi.service --no-pager
-``
+
 🔹 Check real-time logs
 journalctl -fu uomi.service
 
