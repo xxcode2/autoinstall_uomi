@@ -16,7 +16,7 @@ Saat menjalankan script, kamu akan diminta untuk **mengisi nama node**, yang lan
 ## ⚙️ Cara Install  
 
 Clone repo ini:  
-'''bash
+```
 ```git clone https://github.com/xxcode2/autoinstall_uomi.git```
 ```cd autoinstall_uomi```
 
