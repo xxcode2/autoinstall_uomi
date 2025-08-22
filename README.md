@@ -19,10 +19,12 @@ Clone repo ini:
 ```
 git clone https://github.com/xxcode2/autoinstall_uomi.git
 cd autoinstall_uomi
-
+```
 Change permissions and run the script:
+```
 chmod +x autoinstall_uomi.sh
 ./autoinstall_uomi.sh
+```
 ```
 Enter the node name when asked:
 ```
