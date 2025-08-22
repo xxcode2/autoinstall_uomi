@@ -23,10 +23,12 @@ Clone repo ini:
 Change permissions and run the script:
 ```chmod +x autoinstall_uomi.sh```
 ```./autoinstall_uomi.sh```
-
+```
+```
 Enter the node name when asked:
 ```Enter your node name: My-Uomi-Node```
-
+```
+```
 ## 🔍 Important Commands
 🔹 Check node status
 ```sudo systemctl status uomi.service --no-pager```
@@ -54,6 +56,6 @@ Check RPC with:
 ``curl -H "Content-Type: application/json" \
   -d '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' \
   http://localhost:9944``
-
+```
 ## 📖 Official Documentation
 https://docs.uomi.ai/build/run-a-node/run-an-archive-node/binary
