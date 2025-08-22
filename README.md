@@ -16,60 +16,44 @@ Saat menjalankan script, kamu akan diminta untuk **mengisi nama node**, yang lan
 ## ⚙️ Cara Install  
 
 Clone repo ini:  
-```bash
-git clone https://github.com/xxcode2/autoinstall_uomi.git
-cd autoinstall_uomi
-Ubah permission dan jalankan script:
 
-bash
-Copy
-Edit
-chmod +x autoinstall_uomi.sh
-./autoinstall_uomi.sh
-Masukkan nama node ketika ditanya:
+```git clone https://github.com/xxcode2/autoinstall_uomi.git```
+```cd autoinstall_uomi```
 
-yaml
-Copy
-Edit
-Masukkan nama node anda: My-Uomi-Node
-🔍 Perintah Penting
-🔹 Cek status node
+Change permissions and run the script:
+```chmod +x autoinstall_uomi.sh```
+```./autoinstall_uomi.sh```
 
-bash
-Copy
-Edit
-sudo systemctl status uomi.service --no-pager
-🔹 Cek logs realtime
+Enter the node name when asked:
+```Enter your node name: My-Uomi-Node```
 
-bash
-Copy
-Edit
-journalctl -fu uomi.service
+## 🔍 Important Commands
+🔹 Check node status
+```sudo systemctl status uomi.service --no-pager```
+
+🔹 Check real-time logs
+```journalctl -fu uomi.service```
+
 🔹 Restart node
 
-bash
-Copy
-Edit
-sudo systemctl restart uomi.service
+```sudo systemctl restart uomi.service```
+
+
 🔹 Stop node
 
-bash
-Copy
-Edit
-sudo systemctl stop uomi.service && sudo systemctl disable uomi.service
+```sudo systemctl stop uomi.service && sudo systemctl disable uomi.service```
+
+
 🔹 Backup data node
 
-bash
-Copy
-Edit
-sudo tar -czf uomi-backup-$(date +%Y%m%d).tar.gz /var/lib/uomi
-🌐 Verifikasi RPC Endpoint
-Cek RPC dengan:
+```sudo tar -czf uomi-backup-$(date +%Y%m%d).tar.gz /var/lib/uomi```
 
-bash
-Copy
-Edit
-curl -H "Content-Type: application/json" \
+## 🌐 Verify RPC Endpoint
+
+Check RPC with:
+``curl -H "Content-Type: application/json" \
   -d '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' \
-  http://localhost:9944
-✅ Jika berhasil, akan muncul output JSON status kesehatan node.
+  http://localhost:9944``
+
+## 📖 Official Documentation
+https://docs.uomi.ai/build/run-a-node/run-an-archive-node/binary
