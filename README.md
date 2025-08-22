@@ -1,21 +1,21 @@
-# 🚀 Uomi Node Auto Installer  
+# 🚀 Uomi Node Auto Installer
 
-Script ini membantu install dan menjalankan **Uomi Node** secara otomatis di server Ubuntu 22 / 24.  
-Saat menjalankan script, kamu akan diminta untuk **mengisi nama node**, yang langsung digunakan dalam konfigurasi systemd.  
-
----
-
-## 📋 Prasyarat  
-
-- **Ubuntu 22.04** atau **Ubuntu 24.04**  
-- Minimal **2 CPU, 4GB RAM, 80GB Disk** (lebih besar disarankan untuk archive node)  
-- Akses root / sudo  
+This script helps you automatically install and run Uomi Node on an Ubuntu 22/24 server.
+When running the script, you will be prompted to enter a node name, which is directly used in the systemd configuration.
 
 ---
 
-## ⚙️ Cara Install  
+## 📋 Prerequisites
 
-Clone repo ini:  
+- Ubuntu 22.04 or Ubuntu 24.04
+- Minimum 2 CPUs, 4GB RAM, 80GB disk space (more is recommended for archive nodes)
+- Root/sudo access
+
+---
+
+## ⚙️ How to Install
+
+Clone this repo:
 ```
 git clone https://github.com/xxcode2/autoinstall_uomi.git
 cd autoinstall_uomi
