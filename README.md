@@ -20,43 +20,56 @@ Clone repo ini:
 git clone https://github.com/xxcode2/autoinstall_uomi.git
 cd autoinstall_uomi
 Ubah permission dan jalankan script:
+
+bash
+Copy
+Edit
 chmod +x autoinstall_uomi.sh
 ./autoinstall_uomi.sh
 Masukkan nama node ketika ditanya:
+
+yaml
+Copy
+Edit
 Masukkan nama node anda: My-Uomi-Node
 🔍 Perintah Penting
+🔹 Cek status node
 
-Cek status node
-
+bash
+Copy
+Edit
 sudo systemctl status uomi.service --no-pager
+🔹 Cek logs realtime
 
-
-Cek logs realtime
-
+bash
+Copy
+Edit
 journalctl -fu uomi.service
+🔹 Restart node
 
-
-Restart node
-
+bash
+Copy
+Edit
 sudo systemctl restart uomi.service
+🔹 Stop node
 
-
-Stop node
-
+bash
+Copy
+Edit
 sudo systemctl stop uomi.service && sudo systemctl disable uomi.service
+🔹 Backup data node
 
-
-Backup data node
-
+bash
+Copy
+Edit
 sudo tar -czf uomi-backup-$(date +%Y%m%d).tar.gz /var/lib/uomi
-
 🌐 Verifikasi RPC Endpoint
-
 Cek RPC dengan:
 
+bash
+Copy
+Edit
 curl -H "Content-Type: application/json" \
-  -d '{"id":1, "jsonrpc":"2.0", "method": "system_health", "params":[]}' \
+  -d '{"id":1,"jsonrpc":"2.0","method":"system_health","params":[]}' \
   http://localhost:9944
-
-📖 Dokumentasi Resmi
-https://docs.uomi.ai/build/run-a-node/run-an-archive-node/binary
+✅ Jika berhasil, akan muncul output JSON status kesehatan node.
