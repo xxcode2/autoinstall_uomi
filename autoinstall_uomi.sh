@@ -4,7 +4,7 @@ set -e
 echo "=== Uomi Node Auto Installer ==="
 
 # 1. Tanya nama node
-read -p "Masukkan nama node anda: " NODE_NAME
+read -p "Enter your node name: " NODE_NAME
 
 # 2. Install dependencies
 echo ">>> Install prerequisites..."
@@ -35,7 +35,7 @@ if [ "$UBUNTU_VER" -eq "22" ]; then
 elif [ "$UBUNTU_VER" -eq "24" ]; then
   wget -O uomi https://github.com/Uomi-network/uomi-node/releases/latest/download/uomi_ubuntu_24
 else
-  echo "Ubuntu versi $UBUNTU_VER belum didukung. Gunakan 22 atau 24."
+  echo "Ubuntu version $UBUNTU_VER is not yet supported. Use 22 or 24."
   exit 1
 fi
 
@@ -45,7 +45,7 @@ sudo chmod +x /usr/local/bin/uomi
 sudo cp ./genesis.json /usr/local/bin/
 
 # 6. Buat service file
-echo ">>> Membuat systemd service..."
+echo ">>> Creating a systemd service..."
 SERVICE_FILE=/etc/systemd/system/uomi.service
 sudo tee $SERVICE_FILE > /dev/null <<EOF
 [Unit]
@@ -83,11 +83,11 @@ WantedBy=multi-user.target
 EOF
 
 # 7. Enable & start
-echo ">>> Menjalankan node..."
+echo ">>> Running node..."
 sudo systemctl daemon-reload
 sudo systemctl enable uomi.service
 sudo systemctl start uomi.service
 
-echo "=== Instalasi selesai! ==="
-echo "Cek status dengan: sudo systemctl status uomi.service --no-pager"
-echo "Cek logs   dengan: journalctl -fu uomi.service"
+echo "=== Installation complete! ==="
+echo "Check the status with: sudo systemctl status uomi.service --no-pager"
+echo "Check the logs with: journalctl -fu uomi.service"
